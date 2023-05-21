@@ -14,6 +14,7 @@ namespace TDD2
         {
             InitializeComponent();
             uC_addStudent1.Hide();
+            uC_showTable1.Hide();
         }
         private bool checkLimits(int num)
         {

@@ -24,11 +24,11 @@ namespace TDD2
 
         public void showTableData()
         {
-            float before =  DateTime.Now.Millisecond;
+            float before = DateTime.Now.Millisecond;
             Student.mergeSort(Student.arrStudents);
-            float after = DateTime.Now.Millisecond; 
+            float after = DateTime.Now.Millisecond;
             float runTime = after - before;
-            MessageBox.Show("" + runTime);
+            MessageBox.Show("The table sort took " + runTime + " seconds");
             for (int i = 0; i < Student.arrStudents.Count; i++)
             {
                 Student s = Student.arrStudents[i];
@@ -37,7 +37,7 @@ namespace TDD2
 
         }
 
-        
+
 
         private void UC_showTable_Load(object sender, EventArgs e)
         {

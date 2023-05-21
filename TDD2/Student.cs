@@ -32,7 +32,7 @@ namespace TDD2
             
         }
 
-        public float calculateAvarege(int[] grades)
+        public static float calculateAvarege(int[] grades)
         {
             float sum = 0;
             for (int i = 0; i < grades.Length; i++)
@@ -47,17 +47,18 @@ namespace TDD2
 
         }
 
-        public static void sortArr() // bubble sort n^2
-        {
-            for (int i = 0; i < arrStudents.Count; i++)
-            {
-                for (int j = 0; j < arrStudents.Count; j++)
-                {
-                    if (arrStudents[i].avg > arrStudents[j].avg)
-                        swap(i, j);
-                }
-            }
-        }
+        //public static void bubbleSortArray(List<Student> list) // bubble sort n^2
+        //{
+        //    for (int i = 0; i < list.Count; i++)
+        //    {
+        //        for (int j = i + 1; j < list.Count; j++)
+        //        {
+        //            if (list[i].avg > list[j].avg)
+        //                swap(list,i, j);
+        //        }
+        //    }
+        //}
+
         public static void mergeSort(List<Student> list) //quick sort nlogn
         {
             if (list.Count > 1)
@@ -97,11 +98,11 @@ namespace TDD2
             }
         }
 
-        public static void swap(int i, int j)
+        public static void swap(List<Student> list, int i, int j)
         {
-            Student temp = arrStudents[j];
-            arrStudents[j] = arrStudents[i];
-            arrStudents[i] = temp;
+            Student temp = list[j];
+            list[j] = list[i];
+            list[i] = temp;
         }
     }
 }
